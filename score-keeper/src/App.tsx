@@ -16,6 +16,9 @@ function App() {
           P2 count is {playerTwoScore}
         </button>
       </div>
+
+      <p>hello</p>
+
     </div>
     </>
   )
