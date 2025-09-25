@@ -29,15 +29,15 @@ jobs:
         with:
           node-version: lts/*
           cache: 'npm'
-          cache-dependency-path: ./HotdogClub/package-lock.json
+          cache-dependency-path: ./score-keeper/package-lock.json
 
       - name: Install dependencies
         run: npm ci
-        working-directory: ./HotdogClub
+        working-directory: ./score-keeper
 
       - name: Build
         run: npm run build
-        working-directory: ./HotdogClub
+        working-directory: ./score-keeper
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -45,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./HotdogClub/dist
+          path: ./score-keeper/dist
 
       - name: Deploy to GitHub Pages
         id: deployment
